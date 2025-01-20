@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Main */
+.main{
+    background-color: #0F0D0D;
+    cursor: none;
+}
+
+/* Cursor */
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #EDBFFF;
+    position: fixed;
+    z-index: 1009;
+    mix-blend-mode: difference;
+}
+#purple{
+    height: 100vh;
+    width: 100vw;
+    background-color: #EDBFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease;
+    /* mix-blend-mode: difference; */
+}
+#purple .marquee {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    mix-blend-mode: difference;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#purple .marquee span {
+    display: block;
+    padding-left: 100%;
+    font-size: 8vw;
+    color: #fff;
+    animation: marquee 4s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/* Leafs */
+.leaf1{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 5vh; */
+    text-align: center;
+    z-index: 20;
+}
+.leaf2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+}
+.leaf3{
+    min-height: 110vh;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+    padding: 10vh 5vw;
+    border-bottom: 1.6px solid #111;
+}
+.leaf4{
+    min-height: 310vh;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+}
+.leaf5{
+    min-height: 85vh;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+    padding: 0 .5vw;
+    margin-top: 25vh;
+    border-bottom: 1.6px solid #fff;
+}
+.leaf6{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+    padding: 1vh 6.5vw;
+}
+.leaf7{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+    margin-top: 10vh;
+}
+/* nav */
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vh 2vw;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    color: #fff;
+    /* background-color: #111; */
+    z-index: 100;
+    cursor: none;
+}
+#nav img{
+    width: 60px;
+}
+#navLinks{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 11px;
+    /* margin-top: -1vh; */
+    text-transform: uppercase;
+}
+.navCircle{
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    background-color: #fff;
+    mix-blend-mode: darken;
+}
+#navLinks h4{
+    color: #fff;
+    font-weight: 500;
+    font-size: .9vw;
+    letter-spacing: .2px;
+    padding-bottom: 1px;
+}
+#navLinks h4:nth-child(1){
+    border-bottom: 1.6px solid #ffffff;
+}
+
+/* Leaf1 */
+.leaf1 h1{
+    font-size: 7vw;
+    font-weight: 500;
+    letter-spacing: .1px;
+    line-height: 1;
+    padding: 0 5vw;
+    color: #fff;
+    margin-top: 10vh;
+}
+.leaf1 h2{
+    font-size: 7vw;
+    font-weight: 500;
+    letter-spacing: .1px;
+    padding: 0 5vw;
+    color: #fff;
+    margin-top: -1vh;
+}
+.leaf1 p{
+    font-size: 1.1vw;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #fff;
+    padding: 0 5vw;
+    width: 50%;
+    margin-top: 5vh;
+}
+
+/* Leaf2 */
+.leaf2 video{
+    position: absolute;
+    width: 65%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+/* .leaf3 */
+.leaf3 h1{
+    font-size: 7vw;
+    font-weight: 500;
+    padding: 5vh 1vw;
+    margin: 4vh 0;
+}
+.leaf3Container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 4vw;
+}
+.leaf3ContainerLeft{
+    width: 30%;
+}
+.leaf3ContainerLeft h2{
+    font-size: 3vw;
+    font-weight: 600;
+}
+.leaf3ContainerRight{
+    width: 27%;
+}
+.leaf3ContainerRight p{
+    font-size: 1.7vw;
+    line-height: 1.04;
+    font-weight: 500;
+    padding-left: 2vw;
+}
+.leaf3ContainerRight button{
+    padding: .7vh 2vw;
+    background-color: #EDBFFF;
+    color: #0F0D0D;
+    font-size: .9vw;
+    font-weight: 500;
+    border-radius: 12px;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    width: 90%;
+    border: none;
+    outline: none;
+    margin-top: 3vh;
+    cursor: none;
+    /* cursor: pointer; */
+}
+/* Leaf4 */
+.leaf4 h1{
+    font-size: 7vw;
+    font-weight: 500;
+    padding: 6vh 7vw;
+    margin: 4vh 0;
+}   
+.leaf4 h2{
+    font-size: 7vw;
+    font-weight: 500;
+    padding: 0 7vw;
+    margin: -12vh 0;
+}
+
+#leaf4Img1{
+    margin-left: 7vw;
+    margin-top: 50vh;
+}
+#leaf4Img2{
+    margin-left: 53vw;
+    margin-top: 10vh;
+}
+#leaf4Video1{
+    position: absolute;
+    margin-left: 28vw;
+    margin-top: 2vh;
+    width: 40%;
+}
+#leaf4Video2{
+    margin-left: 10vw;
+    margin-top: -30vh;
+    width: 35%;
+}
+.leaf4ContainerRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8vh 1vw;
+}
+.leaf4RightHeader h1{
+    font-size: 4vw;
+    font-weight: 500;
+    color: #fff;
+}
+.leaf4RightHeader h1 span{
+    color: #d89af0;
+    text-transform: uppercase;
+    padding-left: .5vw;
+}
+.leaf4RightCircle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #EDBFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5vw;
+    transition: all .3s ease;
+}
+.leaf4RightCircle h4{
+    font-size: .8vw;
+    font-weight: 700;
+    color: #0F0D0D;
+}
+.leaf4RightCircle:hover{
+    scale: 1.1;
+}
+/* Leaf5 */
+.elem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* gap: 1vw; */
+    transition: all .5s ease;
+    padding: 0vh 2vw;
+}
+.elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all .5s ease-out;
+    transform: translateY(10%) rotate(3deg);
+}
+.elem img:nth-child(1){
+    left: 7%;
+}
+.elem img:nth-child(3){
+    right: 10%;
+    /* top: 5%; */
+}
+.leaf5Text{
+    /* text-align: center; */
+    height: 17vh;
+    overflow: hidden;
+    z-index: 19;
+    /* margin-top: 10vh; */
+    /* background-color: #d89af0; */
+}
+.leaf5Text h1{
+    font-size: 7vw;
+    font-weight: 700;
+    color: #fff;
+    transition: all .5s ease-out;
+    letter-spacing: .1px;
+}
+.elem:hover h1{
+    transform: translateY(-100%);
+    color: #EDBFFF;
+}
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+}
+/* Leaf 6 */
+.leaf6 h1{
+    font-size: 2.5vw;
+    font-weight: 600;
+    /* padding: 1vh 5vw; */
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: .1px;
+    margin-top: 13vh;
+    border-bottom: 2.2px solid #ffffff;
+    padding-bottom: 5vh;
+}
+.leaf6 h1 span{
+    color: #EDBFFF;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 5vw; */
+    color: #787878;    
+    height: 13vh;
+    border-bottom: 2.2px solid #ffffff;
+    transition: all .3s ease;
+}
+.box h3{
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+.box h4{
+    font-size: 1.4vw;
+    font-weight: 400;
+}
+.box:hover{
+    color: #dddddd;
+}
+
+/* .leaf7 */
+.leaf7{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #EDBFFF; */
+    padding: 13vh 8vw;
+    color: #fff;
+    transition: all .3s ease;
+}
+.leaf7Container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   padding-bottom: 10vh;
+    border-bottom: 1.4px solid #111;
+}
+#leaf7Header{
+    font-size: 3vw;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1vh;
+    width: 60%;
+    line-height: 1;
+    letter-spacing: .1px;
+}
+#leaf7Circle{
+    background-color: #fff;
+    padding: none;
+    margin-bottom: 20vh;
+}
+.leaf7ContainerDown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10vh;
+    width: 100%;
+}
+.leaf7ContainerDownLeft{
+    width: 90%;
+}
+.leaf7ContainerDownLeft h2{
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1vh;
+}
+.leaf7ContainerDownLeft input{
+    padding: 1vh 1vw;
+    /* border-radius: 12px; */
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1.5px solid #111;
+}
+.leaf7ContainerDownLeft input::placeholder{
+    font-size: 1.4vw;
+    letter-spacing: .1px;
+    padding-left: -5vw;
+}
+.both{
+    margin-top: 5vh;
+    position: relative;
+}
+.leaf7ContainerDownLeft button{
+    position: absolute;
+    padding: .6vh 1.5vw;
+    background-color: transparent;
+    color: #111;
+    font-size: .9vw;
+    font-weight: 700;
+    border-radius: 20px;
+    border: 1px solid #111;
+    outline: none;
+    margin-left: -7vw;
+}
+.leaf7ContainerDownRight{
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.leaf7ContainerDownRight .noLink{
+    margin-right: 2.5vw;
+}
+.leaf7ContainerDownRight h1{
+    font-size: 1.7vw;
+    font-weight: 500;
+    color: #111;
+    margin-top: -3vh;
+    margin-bottom: 5vh;
+}
+.leaf7ContainerDownRight .link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 7vw;
+    /* flex-direction: column; */
+    /* width: 100%; */
+}
+.leaf7ContainerDownRight .link h2{
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #111;
+}
+.leaf7ContainerDownRight .hubs{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column; 
+    width: 100%;
+}
+.leaf7ContainerDownRight .hubs h2{
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 3vh;
+}
+.leaf7ContainerDownRight .socials h2{
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 3vh;
+}
+.leaf7ContainerDownRight a{
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    line-height: 1.5;
+}
